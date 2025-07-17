@@ -9,7 +9,7 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
  
 const [role, setRole] = useState(() => JSON.parse(localStorage.getItem('role')) || '');
-const [token, setToken] = useState(() =>  JSON.parse(localStorage.getItem('token')) ||  '');
+const [token, setToken] = useState(() => localStorage.getItem('token') || '');
 const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user')) || '');
  
 
@@ -29,10 +29,10 @@ const setRoles = useCallback((role) =>{
   localStorage.setItem('role', JSON.stringify(role));
   }, []);
 
-  const setTokens = useCallback((token) => {
-    setToken(token);
-    localStorage.setItem('token', JSON.stringify(token));
-    }, []);
+ const setTokens = useCallback((token) => {
+  setToken(token);
+  localStorage.setItem('token', token); // store token as string directly
+}, []);
 
     const setNames = useCallback((user) => {
       setUser(user);

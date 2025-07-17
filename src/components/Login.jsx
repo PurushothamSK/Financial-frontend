@@ -23,6 +23,8 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 const Login = () => {
   const navigate = useNavigate();
   const { showSnackbar, showLoader, hideLoader} = useSnackbar();
+  // const auth = useAuth();
+  // console.log('auth context value:', auth); // 
   const {setRoles, setTokens, setNames} = useAuth();
   const [showPassword, setShowPassword] = useState(false);
 
