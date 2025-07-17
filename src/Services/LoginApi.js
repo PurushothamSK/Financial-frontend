@@ -1,5 +1,5 @@
 import axios from "axios";
-const BaseUrl = 'http://localhost:5000/frantiger/fpc/api/';
+const BaseUrl = import.meta.env.VITE_API_URL;
 
 
 const loginApi = async(data) => {
