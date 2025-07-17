@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import { useLocation, useNavigate } from "react-router-dom";
 import AccountPopover from "./AccountPopover";
-import logo from "../assets/images/logo.png"; // ✅ Bundled import
+import logo from "../assets/images/Logo.png"; // ✅ Bundled import
 
 export default function Header() {
   const theme = useTheme();
